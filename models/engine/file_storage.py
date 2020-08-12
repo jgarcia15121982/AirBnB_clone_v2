@@ -52,9 +52,5 @@ class FileStorage:
     def delete(self, obj=None):
         """ will delete objects """
         if obj is not None:
-            for i in FileStorage.__objects:
-                if obj == FileStorage.__objects[i]:
-                    del(FileStorage.__objects[i])
-                    self.save()
-        else:
-            pass
+            ps = "{}.{}".format(obj.__class__.__name__, obj.id)
+            del(FileStorage.__objects[ps])
