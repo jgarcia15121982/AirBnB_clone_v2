@@ -54,3 +54,5 @@ class FileStorage:
         if obj is not None:
             ps = "{}.{}".format(obj.__class__.__name__, obj.id)
             del(FileStorage.__objects[ps])
+        else:
+            pass
