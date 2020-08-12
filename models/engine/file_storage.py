@@ -52,7 +52,7 @@ class FileStorage:
     def delete(self, obj=None):
         """ will delete objects """
         if obj is not None:
-            ps = "{}.{}".format(obj.__class__.__name__, obj.id)
+            ps = "{}.{}".format(type(obj).__class__.__name__, obj.id)
             del(FileStorage.__objects[ps])
         else:
             pass
