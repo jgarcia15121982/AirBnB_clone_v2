@@ -144,5 +144,5 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 
 ## Project Contributions by
 
-* Juan Villegas juan.villegas@holbertonschool.com
+* Juan Villegas juan.villegas@holbertonschool.com AND
 * John Garcia john.garcia@holbertonschool.com
