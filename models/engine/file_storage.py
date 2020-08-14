@@ -15,7 +15,7 @@ class FileStorage:
         else:
             dic = {}
             for val in FileStorage.__objects:
-                if cls == type(FileStorage.__objects[val]):
+                if cls == isinstance(FileStorage.__objects[val]):
                     dic[val] = FileStorage.__objects[val]
             return (dic)
 
