@@ -2,7 +2,7 @@
 """ Generates a .tgz archive """
 
 
-from fabric.api import local
+from fabric.api import *
 from datetime import datetime
 import os
 
@@ -13,10 +13,11 @@ def do_pack():
     try:
         if not os.path.exists('versions'):
             local('mkdir versions')
-            to = 'version/web_static_{}.tgz'.format
-            (datetime.now().strftime(time_f))
+            
+        to = 'version/web_static_{}.tgz'.format
+        (datetime.now().strftime(time_f))
 
-            local('tar -cvzf {} web_static'.format(to))
-            return(to)
+        local('tar -cvzf {} web_static'.format(to))
+        return(to)
     except:
         return (None)
