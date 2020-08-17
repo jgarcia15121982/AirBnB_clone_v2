@@ -2,9 +2,9 @@
 """ Generates a .tgz archive """
 
 
+import os
 from fabric.api import *
 from datetime import datetime
-import os
 
 
 def do_pack():
@@ -14,8 +14,7 @@ def do_pack():
         if not os.path.exists('versions'):
             local('mkdir versions')
             
-        to = 'version/web_static_{}.tgz'.format
-        (datetime.now().strftime(time_f))
+        to = 'versions/web_static_{}.tgz'.format(datetime.now().strftime(time_f))
 
         local('tar -cvzf {} web_static'.format(to))
         return(to)
