@@ -13,10 +13,10 @@ def do_pack():
     try:
         if os.path.versions not exists:
             local(mkdir versions)
-            to = 'version/web_static_{}.tgz'.format(datetime.now().strftime(time_f))
+            to = 'version/web_static_{}.tgz'
+            .format(datetime.now().strftime(time_f))
 
             local('tar -cvzf {} web_static'.format(to))
             return(to)
     except:
         return (None)
-
