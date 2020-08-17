@@ -13,7 +13,6 @@ def do_pack():
     try:
         if not os.path.exists('versions'):
             local('mkdir versions')
-            
         to = 'versions/web_static_{}.tgz'.format(
                 datetime.now().strftime(time_f))
 
