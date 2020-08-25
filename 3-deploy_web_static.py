@@ -48,6 +48,6 @@ def do_deploy(archive_path):
 def deploy():
     """ deploy """
     r_pack = do_pack()
-    if r_pack is None:
+    if not r_pack:
         return (False)
-    return (do_deploy(r_pack))
+    return do_deploy(r_pack)
