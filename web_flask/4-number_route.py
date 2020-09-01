@@ -34,8 +34,7 @@ def python(text="is cool"):
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """ if n is an integer return a message """
-    pr = print("{:d} is a number".format(n))
-    return (pr)
+    return ("{:d} is a number".format(n))
 
 if __name__ == "__main__":
     """ function of the main """
