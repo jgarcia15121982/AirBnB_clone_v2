@@ -35,7 +35,7 @@ def python(text="is cool"):
 def number(n):
     """ if n is an integer return a message """
     i = isinstance(n, int)
-    pr = print("{} is a number".format(n))
+    pr = print("{:d} is a number".format(n))
     if n == i:
         return (pr)
     else:
