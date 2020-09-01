@@ -34,10 +34,8 @@ def python(text="is cool"):
 @app.route('/number/<n>', strict_slashes=False)
 def number(n):
     """ if n is an integer return a message """
-    i = isinstance(n, int)
     pr = print("{:d} is a number".format(n))
-    if n == i:
-        return (pr)
+    return (pr)
 
 if __name__ == "__main__":
     """ function of the main """
