@@ -38,9 +38,6 @@ def number(n):
     pr = print("{:d} is a number".format(n))
     if n == i:
         return (pr)
-    else:
-        pass
-
 
 if __name__ == "__main__":
     """ function of the main """
