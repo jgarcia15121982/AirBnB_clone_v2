@@ -21,7 +21,7 @@ class State(BaseModel, Base):
 
         dict_2 = models.storage.all(City)
         list_2 = []
-        for res1, res2 in dict_2.items():
-            if res2.state_id == self.id:
-                list_2.append(res2)
+        for res1 in dict_2.values():
+            if res1.state_id == self.id:
+                list_2.append(res1)
         return list_2
