@@ -64,7 +64,7 @@ class DBStorage:
     def save(self):
         """public instance method SAVE"""
         self.__session.commit()
-        
+
     def delete(self, obj=None):
         """public instance method DELETE"""
         if obj is not None:
