@@ -63,3 +63,7 @@ class FileStorage:
             del(FileStorage.__objects[ps])
         else:
             pass
+
+    def close(self):
+        """ call reload for json files """
+        self.reload()
